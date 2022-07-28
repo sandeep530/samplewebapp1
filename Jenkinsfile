@@ -18,7 +18,7 @@ stage ('dockerimageBuild')
     {
     steps
     {
-        sh "cd /var/lib/jenkins/workspace/sampleswebapp/app; sudo docker build -t webapps . " 
+        sh "cd /var/lib/jenkins/workspace/sampleswebapp/app/; sudo docker build -t webapps . " 
     }
 }
      stage ('dockerimagepush') 
