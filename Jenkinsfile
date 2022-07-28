@@ -18,6 +18,7 @@ stage ('dockerimageBuild')
     {
     steps
     {
+        sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo  docker login -u sand3cs -p Mrvsa@123 "
         sh "cd /var/lib/jenkins/workspace/sampleswebapp/app/; sudo docker build -t webapps1 . " 
     }
 }
@@ -25,7 +26,6 @@ stage ('dockerimageBuild')
 {
     steps
     {
-       sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo  docker login -u sand3cs -p Mrvsa@123 "
         sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo docker tag webapps1 sand3cs/webapps1 "
         sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo docker push sand3cs/webapps1  "
         
