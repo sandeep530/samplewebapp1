@@ -18,16 +18,16 @@ stage ('dockerimageBuild')
     {
     steps
     {
-        sh "cd /var/lib/jenkins/workspace/sampleswebapp; sudo docker build -t account-service . " 
+        sh "cd /var/lib/jenkins/workspace/sampleswebapp/app; sudo docker build -t account-service . " 
     }
 }
      stage ('dockerimagepush') 
 {
     steps
     {
-       sh "cd /var/lib/jenkins/workspace/sampleswebapp ; sudo  docker login -usand3cs -pMrvsa@123 "
-        sh "cd /var/lib/jenkins/workspace/sampleswebapp ; sudo docker tag account-service sand3cs/account-service "
-        sh "cd /var/lib/jenkins/workspace/sampleswebapp ; sudo docker push sand3cs/account-service  "
+       sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo  docker login -usand3cs -pMrvsa@123 "
+        sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo docker tag account-service sand3cs/account-service "
+        sh "cd /var/lib/jenkins/workspace/sampleswebapp/app ; sudo docker push sand3cs/account-service  "
         
         
     }
