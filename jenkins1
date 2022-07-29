@@ -11,6 +11,14 @@ steps
         
     }
       }
+      
+ stage ('dockerimageBuild')
+    {
+    steps
+    {
+        sh "cd /var/lib/jenkins/workspace/nagurbabu/app; sudo docker build -t customer-service . " 
+    }
+}     
        }
        }
  
