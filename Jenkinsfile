@@ -33,12 +33,6 @@ stage ('dockerimageBuild')
     }
 }
      
-stage ('sonarqube') 
-    {
-        steps {
-             sh " cd /var/lib/jenkins/workspace/sampleswebapp/app ; dotnet tool install --global dotnet-sonarscanner "
-            
-    }
 }
 }
 }
