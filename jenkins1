@@ -18,7 +18,7 @@ steps
     {
     steps
     {
-        sh " -D /var/lib/jenkins/workspace/nagurbabu/app; sudo docker build -t customer-service . " 
+        sh " sudo docker build -t customer-service /home/ubuntu/workspace/nagurbabu/app " 
     }
 }     
        }
