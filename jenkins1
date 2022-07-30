@@ -25,9 +25,9 @@ steps
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/nagurbabu/app ;   sudo docker login -usand3cs -pMrvsa@123 "
-        sh "cd /home/ubuntu/workspace/nagurbabu/app ;  sudo docker tag webapps sand3cs/webapps "
-        sh "cd /home/ubuntu/workspace/nagurbabu/app ;  sudo docker push sand3cs/webapps  "
+       sh "cd /home/ubuntu/workspace/nagurbabu/app ;   sudo docker login -u sand3cs -p Mrvsa@123 "
+        sh "cd /home/ubuntu/workspace/nagurbabu/app ;  sudo docker tag customer-service sand3cs/customer-service "
+        sh "cd /home/ubuntu/workspace/nagurbabu/app ;  sudo docker push sand3cs/customer-service  "
 
     }
 }
