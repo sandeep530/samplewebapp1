@@ -20,7 +20,17 @@ steps
     {
         sh " sudo docker build -t customer-service /home/ubuntu/workspace/nagurbabu/app " 
     }
-}     
+}   
+     stage ('dockerimagepush')
+{
+    steps
+    {
+       sh "cd /home/ubuntu/workspace/nagurbabu/app ;   sudo docker login -usand3cs -pMrvsa@123 "
+        sh "cd /home/ubuntu/workspace/nagurbabu/app ;  sudo docker tag webapps sand3cs/webapps "
+        sh "cd /home/ubuntu/workspace/nagurbabu/app ;  sudo docker push sand3cs/webapps  "
+
+    }
+}
        }
        }
  
