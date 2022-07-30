@@ -36,8 +36,8 @@ steps
     steps {
                 script{
                     withSonarQubeEnv(credentialsId: 'sonarserver') {
-                            sh 'chmod +x MsBuild'
-                            sh './MsBuild sonarqube'
+                            sh 'chmod +x MsBuild.exe'
+                            
                     }
 
                     timeout(time: 1, unit: 'HOURS') {
